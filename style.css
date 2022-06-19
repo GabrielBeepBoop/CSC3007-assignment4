@@ -1,0 +1,103 @@
+* {
+    font-size: 1em;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .wrapper{
+    display: inline-flex;
+    width: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .wrapper .option{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: 2px solid lightgrey;
+    transition: all 0.3s ease;
+  }
+  .wrapper .option .dot{
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+  }
+  .wrapper .option .dot::before{
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: #0069d9;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  #genderSelect:checked:checked ~ .option-1,
+  #vaccinatedSelect:checked:checked ~ .option-2{
+    border-color: gray;
+  }
+  #genderSelect:checked:checked ~ .option-1 .dot,
+  #vaccinatedSelect:checked:checked ~ .option-2 .dot{
+    background: #fff;
+  }
+  #genderSelect:checked:checked ~ .option-1 .dot::before,
+  #vaccinatedSelect:checked:checked ~ .option-2 .dot::before{
+    opacity: 1;
+    transform: scale(1);
+  }
+  .wrapper .option span{
+    font-size: 20px;
+    color: #808080;
+  }
+  .rectBackground {
+  fill: #D3D3D3;
+  stroke: #000;
+  stroke-width: 2px;
+  }
+  .link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+  }
+  .link.selected {
+  stroke: rgb(75, 243, 9);
+  }
+  #selectedLink {
+  fill: #0ff;
+  }
+  .node {
+  stroke: #000;
+  stroke-width: 1px;
+  }
+  .node.selected {
+  stroke: rgb(10, 10, 10);
+  stroke-width: 3px;
+  }
+  .node.clicked {
+  stroke: rgb(1, 20, 20);;
+  stroke-width: 5px;
+  }
+  .tick text {
+  font-size: 16px;
+  }
+  rect {
+  stroke: #000;
+  stroke-width: 0.5px;
+  }
+  rect.selected {
+  stroke: #0ff;
+  stroke-width: 2px;
+  }
